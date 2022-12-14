@@ -1,0 +1,6 @@
+GO:0045944	positive regulation of transcription by RNA polymerase II
+GO:0006325	chromatin organization
+GO:0098609	cell-cell adhesion
+GO:0008406	gonad development
+GO:0016477	cell migration
+GO:0043005	neuron projection

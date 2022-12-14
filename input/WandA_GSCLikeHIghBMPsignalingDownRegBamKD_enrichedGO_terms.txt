@@ -1,0 +1,4 @@
+GO:0007399	nervous system development
+GO:0030154	cell differentiation
+GO:0006357	regulation of transcription by RNA polymerase II
+GO:0050808	synapse organization
