@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 108, in <module>
+    main()
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 26, in main
+    go_gene(my_args)
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 98, in go_gene
+    merged_dict = make_merge_dict(go_terms=my_args["go_term_genes"], gene_lengths=my_args["gene_lengths"])
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 47, in make_merge_dict
+    k = line.split()[0]
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 47, in make_merge_dict
+    k = line.split()[0]
+  File "/isitools/Python3.7.2/lib/python3.7/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/isitools/Python3.7.2/lib/python3.7/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

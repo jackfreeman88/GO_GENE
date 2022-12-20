@@ -1,0 +1,29 @@
+GO_GENE/GO_gene_profile/go_gene.py:98: RuntimeWarning: Mean of empty slice
+  means = {key: np.nanmean(value) for key, value in merged_dict.items()}
+/isitools/Python3.7.2/lib/python3.7/site-packages/numpy/lib/nanfunctions.py:1671: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  keepdims=keepdims)
+Traceback (most recent call last):
+  File "/isitools/Python3.7.2/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Mean_Gene_Len'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 139, in <module>
+    main()
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 26, in main
+    go_gene(my_args)
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 132, in go_gene
+    final = append_go_seq_out(my_args["go_seq_output"], means=means, stdv=stdv)
+  File "GO_GENE/GO_gene_profile/go_gene.py", line 124, in append_go_seq_out
+    final_rounded[col] = final_rounded[col].map(lambda x: fmt % x)
+  File "/isitools/Python3.7.2/lib/python3.7/site-packages/pandas/core/frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/isitools/Python3.7.2/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Mean_Gene_Len'
