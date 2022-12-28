@@ -1,5 +1,5 @@
 ## source /isiseqruns/jfreeman_tmp_home/GO_GENE/GO_gene_profile/.venv/bin/activate
-
+## python /isiseqruns/jfreeman_tmp_home/GO_GENE/GO_gene_profile/go_gene.py /isiseqruns/jfreeman_tmp_home/GO_GENE/GO_gene_profile/ /isiseqruns/jfreeman_tmp_home/GO_GENE/input/GO_termsWith5orMoreGenes_EnrichedInUpRegBamgfpVsTkvqd_cystoblast_BP.tsv /isiseqruns/jfreeman_tmp_home/GO_GENE/input/gene_flydb_lengths.txt /isiseqruns/jfreeman_tmp_home/GO_GENE/input/drosophila_genesets_flydb_at_least_5_genes_forGOseq.txt
 import cmdlogtime
 import sys
 import pdb
@@ -18,10 +18,7 @@ def main():
     (start_time_secs, pretty_start_time, my_args, logfile) = cmdlogtime.begin(
         COMMAND_LINE_DEF_FILE, sys.argv[0]
     )
-    if my_args["david"]:
-        post_process_david_output(my_args)
-    else:
-        append_length_stats_for_go_gene(my_args)
+    append_length_stats_for_go_gene(my_args)
 
     cmdlogtime.end(logfile, start_time_secs)
 
