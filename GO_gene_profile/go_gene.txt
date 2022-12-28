@@ -19,4 +19,3 @@ go_seq_output|Go seq output file that provides base table|0|0|0|1|0|||
 gene_lengths|txt file specifing gene lenghts|0|0|0|1|0|||
 go_term_genes|txt file specifing genes associated with a go term|0|0|0|1|0|||
 -d|DAVID INPUT FILE|0|0|0|1|0|--david|None|str
--w|wAndA INPUT FILE|0|0|0|1|0|--wanda|None|str

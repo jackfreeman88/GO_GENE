@@ -101,5 +101,37 @@ def test_append_go_seq_out():
         'over_represented_pvalue', 'under_represented_pvalue',
        'numDEInCat', 'numInCat', 'term', 'ontology', 'fdr', 'Mean_Gene_Len',
        'Stdv_Gene_Len'
-    ]
+    ]#def make_len_dic(gene_lengths):
+    #length_dict = {}
+    #with open(gene_lengths, "r") as f:
+        #for line in f:
+           # k, v = line.strip().split()
+           # length_dict[k] = int(v)
+   # return length_dict
+
+
+#def make_go_dic(go_terms):
+
+    go_dict = {}
+    with open(go_terms, "r") as f:
+        for line in f:
+            k = line.split()[0]
+            v = [el for el in line.strip().split()[1:] if el.startswith("FBgn")]
+        go_dict[k] = v
+    return go_dict
+
+
+#def make_merge_dict(go_dict, length_dict):
+    go_dict = make_go_dic(g["go_term_genes"])
+    length_dict = make_len_dic(my_args["gene_lengths"])
+    merged_dict = {}
+    for key in go_dict.keys():
+        merged_dict[key] = list(
+            map(
+                lambda x: length_dict[x] if x in length_dict.keys() else np.NaN,
+                go_dict[key],
+            )
+        )
+
+    return merged_dict
     '''
